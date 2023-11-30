@@ -18,7 +18,6 @@ type
     edt72: TEdit;
     edt73: TEdit;
     dbgrd1: TDBGrid;
-    con1: TZConnection;
     zqry1: TZQuery;
     ds1: TDataSource;
     BitBtn: TBitBtn;
@@ -27,6 +26,7 @@ type
     BitBtn53: TBitBtn;
     BitBtn54: TBitBtn;
     BitBtn55: TBitBtn;
+    con1: TZConnection;
   private
     { Private declarations }
   public

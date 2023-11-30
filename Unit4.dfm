@@ -98,6 +98,7 @@ object Form4: TForm4
     Top = 264
     Width = 665
     Height = 209
+    DataSource = ds1
     TabOrder = 4
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
@@ -153,21 +154,32 @@ object Form4: TForm4
     Caption = 'BitBtn55'
     TabOrder = 10
   end
-  object con1: TZConnection
-    ControlsCodePage = cGET_ACP
-    UTF8StringsAsWideField = False
-    AutoEncodeStrings = False
-    Port = 0
-    Left = 752
-    Top = 32
-  end
   object zqry1: TZQuery
+    Connection = con1
+    Active = True
+    SQL.Strings = (
+      'select * from jenis_barang')
     Params = <>
     Left = 752
     Top = 80
   end
   object ds1: TDataSource
+    DataSet = zqry1
     Left = 752
     Top = 136
+  end
+  object con1: TZConnection
+    ControlsCodePage = cGET_ACP
+    UTF8StringsAsWideField = False
+    AutoEncodeStrings = False
+    Connected = True
+    HostName = 'localhost'
+    Port = 3306
+    Database = 'laundry'
+    User = 'root'
+    Protocol = 'mysql'
+    LibraryLocation = 'C:\Users\ASUS\Desktop\delphi 5o\libmysql.dll'
+    Left = 752
+    Top = 32
   end
 end

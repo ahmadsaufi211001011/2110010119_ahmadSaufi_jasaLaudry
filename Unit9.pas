@@ -1,14 +1,14 @@
-unit Unit5;
+unit Unit9;
 
 interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Buttons, DB, ZAbstractRODataset, ZAbstractDataset,
-  ZDataset, ZAbstractConnection, ZConnection, Grids, DBGrids;
+  Dialogs, StdCtrls, Buttons, Grids, DBGrids, DB, ZAbstractRODataset,
+  ZAbstractDataset, ZDataset, ZAbstractConnection, ZConnection;
 
 type
-  TForm5 = class(TForm)
+  TForm9 = class(TForm)
     lbl1: TLabel;
     lbl2: TLabel;
     lbl3: TLabel;
@@ -17,16 +17,24 @@ type
     edt71: TEdit;
     edt72: TEdit;
     edt73: TEdit;
-    dbgrd1: TDBGrid;
-    zqry1: TZQuery;
-    ds1: TDataSource;
     BitBtn: TBitBtn;
     BitBtn51: TBitBtn;
     BitBtn52: TBitBtn;
     BitBtn53: TBitBtn;
     BitBtn54: TBitBtn;
     BitBtn55: TBitBtn;
+    lbl5: TLabel;
+    edt7edt1: TEdit;
+    lbl6: TLabel;
+    lbl7: TLabel;
+    lbl8: TLabel;
+    edt: TEdit;
+    edt74: TEdit;
+    edt75: TEdit;
+    dbgrd1: TDBGrid;
     con1: TZConnection;
+    zqry1: TZQuery;
+    ds1: TDataSource;
   private
     { Private declarations }
   public
@@ -34,7 +42,7 @@ type
   end;
 
 var
-  Form5: TForm5;
+  Form9: TForm9;
 
 implementation
 

@@ -1,6 +1,6 @@
 object Form5: TForm5
-  Left = 229
-  Top = 173
+  Left = 225
+  Top = 139
   Width = 928
   Height = 542
   Caption = 'Table Status Cucian'
@@ -11,6 +11,7 @@ object Form5: TForm5
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object lbl1: TLabel
@@ -65,33 +66,26 @@ object Form5: TForm5
     Font.Style = []
     ParentFont = False
   end
-  object edt7edt: TEdit
+  object edt1: TEdit
     Left = 216
     Top = 40
     Width = 500
     Height = 21
     TabOrder = 0
   end
-  object edt71: TEdit
+  object edt2: TEdit
     Left = 216
     Top = 72
     Width = 500
     Height = 21
     TabOrder = 1
   end
-  object edt72: TEdit
-    Left = 216
-    Top = 112
-    Width = 500
-    Height = 21
-    TabOrder = 2
-  end
-  object edt73: TEdit
+  object edt3: TEdit
     Left = 216
     Top = 144
     Width = 500
     Height = 21
-    TabOrder = 3
+    TabOrder = 2
   end
   object dbgrd1: TDBGrid
     Left = 40
@@ -99,62 +93,79 @@ object Form5: TForm5
     Width = 665
     Height = 209
     DataSource = ds1
-    TabOrder = 4
+    TabOrder = 3
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = dbgrd1CellClick
   end
-  object BitBtn: TBitBtn
-    Left = 40
-    Top = 200
+  object BitBtn1: TBitBtn
+    Left = 32
+    Top = 184
     Width = 75
     Height = 50
-    Caption = 'BitBtn'
+    Caption = 'BARU'
+    TabOrder = 4
+    OnClick = BitBtn1Click
+  end
+  object BitBtn2: TBitBtn
+    Left = 120
+    Top = 184
+    Width = 75
+    Height = 50
+    Caption = 'Simpan'
     TabOrder = 5
+    OnClick = BitBtn2Click
   end
-  object BitBtn51: TBitBtn
-    Left = 128
-    Top = 200
+  object BitBtn3: TBitBtn
+    Left = 208
+    Top = 184
     Width = 75
     Height = 50
-    Caption = 'BitBtn'
+    Caption = 'Edit'
     TabOrder = 6
+    OnClick = BitBtn3Click
   end
-  object BitBtn52: TBitBtn
-    Left = 216
-    Top = 200
+  object BitBtn4: TBitBtn
+    Left = 296
+    Top = 184
     Width = 75
     Height = 50
-    Caption = 'BitBtn'
+    Caption = 'Hapus'
     TabOrder = 7
+    OnClick = BitBtn4Click
   end
-  object BitBtn53: TBitBtn
-    Left = 312
-    Top = 200
+  object BitBtn5: TBitBtn
+    Left = 384
+    Top = 184
     Width = 75
     Height = 50
-    Caption = 'BitBtn'
+    Caption = 'Batal'
     TabOrder = 8
+    OnClick = BitBtn5Click
   end
-  object BitBtn54: TBitBtn
-    Left = 392
-    Top = 200
+  object BitBtn6: TBitBtn
+    Left = 472
+    Top = 184
     Width = 75
     Height = 50
-    Caption = 'BitBtn'
+    Caption = 'Laporan'
     TabOrder = 9
   end
-  object BitBtn55: TBitBtn
-    Left = 480
-    Top = 200
-    Width = 75
-    Height = 50
-    Caption = 'BitBtn55'
+  object cbb: TComboBox
+    Left = 216
+    Top = 112
+    Width = 497
+    Height = 21
+    ItemHeight = 13
     TabOrder = 10
+    Items.Strings = (
+      'belum selesai'
+      'sudah selesai')
   end
-  object zqry1: TZQuery
+  object ZQuery1: TZQuery
     Connection = con1
     Active = True
     SQL.Strings = (
@@ -164,7 +175,7 @@ object Form5: TForm5
     Top = 80
   end
   object ds1: TDataSource
-    DataSet = zqry1
+    DataSet = ZQuery1
     Left = 752
     Top = 136
   end

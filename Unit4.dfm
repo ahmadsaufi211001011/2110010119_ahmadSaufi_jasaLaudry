@@ -1,6 +1,6 @@
 object Form4: TForm4
-  Left = 210
-  Top = 167
+  Left = 208
+  Top = 146
   Width = 928
   Height = 538
   Caption = 'Table Jenis Barang'
@@ -11,6 +11,7 @@ object Form4: TForm4
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object lbl1: TLabel
@@ -29,9 +30,9 @@ object Form4: TForm4
   object lbl2: TLabel
     Left = 32
     Top = 72
-    Width = 110
+    Width = 138
     Height = 23
-    Caption = 'Berat Barang'
+    Caption = 'Berat Barang Kg'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -19
@@ -65,33 +66,19 @@ object Form4: TForm4
     Font.Style = []
     ParentFont = False
   end
-  object edt7edt: TEdit
+  object edt1: TEdit
     Left = 200
     Top = 40
     Width = 500
     Height = 21
     TabOrder = 0
   end
-  object edt71: TEdit
+  object edt2: TEdit
     Left = 200
     Top = 72
     Width = 500
     Height = 21
     TabOrder = 1
-  end
-  object edt72: TEdit
-    Left = 200
-    Top = 112
-    Width = 500
-    Height = 21
-    TabOrder = 2
-  end
-  object edt73: TEdit
-    Left = 200
-    Top = 144
-    Width = 500
-    Height = 21
-    TabOrder = 3
   end
   object dbgrd1: TDBGrid
     Left = 40
@@ -99,62 +86,92 @@ object Form4: TForm4
     Width = 665
     Height = 209
     DataSource = ds1
-    TabOrder = 4
+    TabOrder = 2
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = dbgrd1CellClick
   end
-  object BitBtn: TBitBtn
-    Left = 40
-    Top = 200
+  object BitBtn1: TBitBtn
+    Left = 32
+    Top = 192
     Width = 75
     Height = 50
-    Caption = 'BitBtn'
+    Caption = 'BARU'
+    TabOrder = 3
+    OnClick = BitBtn1Click
+  end
+  object BitBtn2: TBitBtn
+    Left = 120
+    Top = 192
+    Width = 75
+    Height = 50
+    Caption = 'Simpan'
+    TabOrder = 4
+    OnClick = BitBtn2Click
+  end
+  object BitBtn3: TBitBtn
+    Left = 208
+    Top = 192
+    Width = 75
+    Height = 50
+    Caption = 'Edit'
     TabOrder = 5
+    OnClick = BitBtn3Click
   end
-  object BitBtn51: TBitBtn
-    Left = 128
-    Top = 200
+  object BitBtn4: TBitBtn
+    Left = 296
+    Top = 192
     Width = 75
     Height = 50
-    Caption = 'BitBtn'
+    Caption = 'Hapus'
     TabOrder = 6
+    OnClick = BitBtn4Click
   end
-  object BitBtn52: TBitBtn
-    Left = 216
-    Top = 200
+  object BitBtn5: TBitBtn
+    Left = 384
+    Top = 192
     Width = 75
     Height = 50
-    Caption = 'BitBtn'
+    Caption = 'Batal'
     TabOrder = 7
+    OnClick = BitBtn5Click
   end
-  object BitBtn53: TBitBtn
-    Left = 312
-    Top = 200
+  object BitBtn6: TBitBtn
+    Left = 472
+    Top = 192
     Width = 75
     Height = 50
-    Caption = 'BitBtn'
+    Caption = 'Laporan'
     TabOrder = 8
   end
-  object BitBtn54: TBitBtn
-    Left = 392
-    Top = 200
-    Width = 75
-    Height = 50
-    Caption = 'BitBtn'
+  object cbb1: TComboBox
+    Left = 200
+    Top = 104
+    Width = 497
+    Height = 21
+    ItemHeight = 13
     TabOrder = 9
+    Items.Strings = (
+      'baju'
+      'handuk '
+      'kain'
+      'celana')
   end
-  object BitBtn55: TBitBtn
-    Left = 480
-    Top = 200
-    Width = 75
-    Height = 50
-    Caption = 'BitBtn55'
+  object cbb2: TComboBox
+    Left = 200
+    Top = 136
+    Width = 497
+    Height = 21
+    ItemHeight = 13
     TabOrder = 10
+    Items.Strings = (
+      'diproses'
+      'telah selesai')
   end
-  object zqry1: TZQuery
+  object ZQuery1: TZQuery
     Connection = con1
     Active = True
     SQL.Strings = (
@@ -164,7 +181,7 @@ object Form4: TForm4
     Top = 80
   end
   object ds1: TDataSource
-    DataSet = zqry1
+    DataSet = ZQuery1
     Left = 752
     Top = 136
   end

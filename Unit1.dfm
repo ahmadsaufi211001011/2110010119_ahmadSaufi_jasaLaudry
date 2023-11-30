@@ -1,7 +1,7 @@
 object Form1: TForm1
-  Left = 235
-  Top = 161
-  Width = 928
+  Left = 227
+  Top = 159
+  Width = 816
   Height = 538
   Caption = 'Table Pelanggan'
   Color = clBtnFace
@@ -11,6 +11,7 @@ object Form1: TForm1
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object lbl1: TLabel
@@ -59,63 +60,68 @@ object Form1: TForm1
     Height = 21
     TabOrder = 0
   end
-  object edt71: TEdit
+  object edt1: TEdit
     Left = 184
     Top = 48
     Width = 513
     Height = 21
     TabOrder = 1
   end
-  object edt72: TEdit
+  object edt2: TEdit
     Left = 184
     Top = 80
     Width = 513
     Height = 21
     TabOrder = 2
   end
-  object BitBtn: TBitBtn
-    Left = 184
-    Top = 144
+  object BitBtn1: TBitBtn
+    Left = 16
+    Top = 136
     Width = 75
     Height = 50
     Caption = 'BARU'
     TabOrder = 3
+    OnClick = BitBtn1Click
   end
-  object BitBtn51: TBitBtn
-    Left = 272
-    Top = 144
+  object BitBtn2: TBitBtn
+    Left = 104
+    Top = 136
     Width = 75
     Height = 50
     Caption = 'Simpan'
     TabOrder = 4
+    OnClick = BitBtn2Click
   end
-  object BitBtn52: TBitBtn
-    Left = 360
-    Top = 144
+  object BitBtn3: TBitBtn
+    Left = 192
+    Top = 136
     Width = 75
     Height = 50
     Caption = 'Edit'
     TabOrder = 5
+    OnClick = BitBtn3Click
   end
-  object BitBtn53: TBitBtn
-    Left = 448
-    Top = 144
+  object BitBtn4: TBitBtn
+    Left = 280
+    Top = 136
     Width = 75
     Height = 50
     Caption = 'Hapus'
     TabOrder = 6
+    OnClick = BitBtn4Click
   end
-  object BitBtn54: TBitBtn
-    Left = 536
-    Top = 144
+  object BitBtn5: TBitBtn
+    Left = 368
+    Top = 136
     Width = 75
     Height = 50
     Caption = 'Batal'
     TabOrder = 7
+    OnClick = BitBtn5Click
   end
-  object BitBtn55: TBitBtn
-    Left = 624
-    Top = 144
+  object BitBtn6: TBitBtn
+    Left = 456
+    Top = 136
     Width = 75
     Height = 50
     Caption = 'Laporan'
@@ -125,7 +131,7 @@ object Form1: TForm1
     Left = 16
     Top = 216
     Width = 689
-    Height = 177
+    Height = 217
     DataSource = ds1
     TabOrder = 9
     TitleFont.Charset = DEFAULT_CHARSET
@@ -133,6 +139,7 @@ object Form1: TForm1
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = dbgrd1CellClick
   end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP
@@ -145,21 +152,21 @@ object Form1: TForm1
     User = 'root'
     Protocol = 'mysql'
     LibraryLocation = 'C:\Users\ASUS\Desktop\delphi 5o\libmysql.dll'
-    Left = 784
-    Top = 32
+    Left = 720
+    Top = 8
   end
-  object zqry1: TZQuery
+  object ZQuery1: TZQuery
     Connection = con1
     Active = True
     SQL.Strings = (
       'select * from pelanggan')
     Params = <>
-    Left = 784
-    Top = 96
+    Left = 720
+    Top = 56
   end
   object ds1: TDataSource
-    DataSet = zqry1
-    Left = 832
-    Top = 32
+    DataSet = ZQuery1
+    Left = 760
+    Top = 8
   end
 end

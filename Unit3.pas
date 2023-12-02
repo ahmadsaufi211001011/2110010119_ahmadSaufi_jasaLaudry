@@ -27,7 +27,7 @@ type
     BitBtn6: TBitBtn;
     cbb1: TComboBox;
     frxdatalayanan: TfrxDBDataset;
-    frxpelanggan1: TfrxReport;
+    frxlayanan: TfrxReport;
     procedure posisiawal;
     procedure bersih;
     procedure BitBtn1Click(Sender: TObject);
@@ -37,6 +37,7 @@ type
     procedure dbgrd1CellClick(Column: TColumn);
     procedure BitBtn4Click(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure BitBtn6Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -186,6 +187,11 @@ end;
 procedure TForm3.FormShow(Sender: TObject);
 begin
  posisiawal;
+end;
+
+procedure TForm3.BitBtn6Click(Sender: TObject);
+begin
+frxlayanan.ShowReport();
 end;
 
 end.

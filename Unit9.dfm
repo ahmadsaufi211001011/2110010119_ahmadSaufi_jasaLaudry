@@ -199,16 +199,14 @@ object Form9: TForm9
   end
   object frxcucian: TfrxReport
     Version = '4.0.11'
-    DataSet = frxdatadetailcucian
-    DataSetName = 'frxdatadetailcucian'
     DotMatrixReport = False
     IniFile = '\Software\Fast Reports'
     PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
     PreviewOptions.Zoom = 1.000000000000000000
     PrintOptions.Printer = 'Default'
     PrintOptions.PrintOnSheet = 0
-    ReportOptions.CreateDate = 45262.447911979160000000
-    ReportOptions.LastChange = 45262.447911979160000000
+    ReportOptions.CreateDate = 45262.447911979200000000
+    ReportOptions.LastChange = 45262.483157685200000000
     ScriptLanguage = 'PascalScript'
     ScriptText.Strings = (
       'begin'
@@ -216,7 +214,11 @@ object Form9: TForm9
       'end.')
     Left = 640
     Top = 152
-    Datasets = <>
+    Datasets = <
+      item
+        DataSet = frxdatadetailcucian
+        DataSetName = 'frxdatadetailcucian'
+      end>
     Variables = <>
     Style = <>
     object Data: TfrxDataPage
@@ -227,6 +229,215 @@ object Form9: TForm9
       PaperWidth = 210.000000000000000000
       PaperHeight = 297.000000000000000000
       PaperSize = 9
+      object ReportTitle1: TfrxReportTitle
+        Height = 41.574830000000000000
+        Top = 18.897650000000000000
+        Width = 793.701300000000000000
+        object Memo11: TfrxMemoView
+          Left = 298.582870000000000000
+          Top = 7.559060000000000000
+          Width = 204.094620000000000000
+          Height = 18.897650000000000000
+          DisplayFormat.DecimalSeparator = ','
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          HAlign = haCenter
+          Memo.UTF8 = (
+            'Laporan Data Detail Cucian')
+          ParentFont = False
+        end
+      end
+      object Header1: TfrxHeader
+        Height = 18.897650000000000000
+        Top = 120.944960000000000000
+        Width = 793.701300000000000000
+        object Memo1: TfrxMemoView
+          Left = 37.795300000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          DisplayFormat.DecimalSeparator = ','
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haCenter
+          Memo.UTF8 = (
+            'detail cucian id')
+          ParentFont = False
+        end
+        object Memo2: TfrxMemoView
+          Left = 132.283550000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          DisplayFormat.DecimalSeparator = ','
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haCenter
+          Memo.UTF8 = (
+            'tbarang id')
+          ParentFont = False
+        end
+        object Memo3: TfrxMemoView
+          Left = 226.771800000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          DisplayFormat.DecimalSeparator = ','
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haCenter
+          Memo.UTF8 = (
+            'status cucian id')
+          ParentFont = False
+        end
+        object Memo4: TfrxMemoView
+          Left = 321.260050000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          DisplayFormat.DecimalSeparator = ','
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haCenter
+          Memo.UTF8 = (
+            'tanggal selesai')
+          ParentFont = False
+        end
+        object Memo5: TfrxMemoView
+          Left = 415.748300000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          DisplayFormat.DecimalSeparator = ','
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haCenter
+          Memo.UTF8 = (
+            'jumlah')
+          ParentFont = False
+        end
+      end
+      object MasterData1: TfrxMasterData
+        Height = 22.677180000000000000
+        Top = 162.519790000000000000
+        Width = 793.701300000000000000
+        DataSet = frxdatadetailcucian
+        DataSetName = 'frxdatadetailcucian'
+        RowCount = 0
+        object Memo6: TfrxMemoView
+          Left = 37.795300000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          DataField = 'detailcucian_id'
+          DataSet = frxdatadetailcucian
+          DataSetName = 'frxdatadetailcucian'
+          DisplayFormat.DecimalSeparator = ','
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haCenter
+          Memo.UTF8 = (
+            '[frxdatadetailcucian."detailcucian_id"]')
+          ParentFont = False
+        end
+        object Memo7: TfrxMemoView
+          Left = 132.283550000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          DataField = 'tbarang_id'
+          DataSet = frxdatadetailcucian
+          DataSetName = 'frxdatadetailcucian'
+          DisplayFormat.DecimalSeparator = ','
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haCenter
+          Memo.UTF8 = (
+            '[frxdatadetailcucian."tbarang_id"]')
+          ParentFont = False
+        end
+        object Memo8: TfrxMemoView
+          Left = 226.771800000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          DataField = 'statuscucian_id'
+          DataSet = frxdatadetailcucian
+          DataSetName = 'frxdatadetailcucian'
+          DisplayFormat.DecimalSeparator = ','
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haCenter
+          Memo.UTF8 = (
+            '[frxdatadetailcucian."statuscucian_id"]')
+          ParentFont = False
+        end
+        object Memo9: TfrxMemoView
+          Left = 321.260050000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          DataField = 'tgl_selesai'
+          DataSet = frxdatadetailcucian
+          DataSetName = 'frxdatadetailcucian'
+          DisplayFormat.DecimalSeparator = ','
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haCenter
+          Memo.UTF8 = (
+            '[frxdatadetailcucian."tgl_selesai"]')
+          ParentFont = False
+        end
+        object Memo10: TfrxMemoView
+          Left = 415.748300000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          DataField = 'jumlah'
+          DataSet = frxdatadetailcucian
+          DataSetName = 'frxdatadetailcucian'
+          DisplayFormat.DecimalSeparator = ','
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haCenter
+          Memo.UTF8 = (
+            '[frxdatadetailcucian."jumlah"]')
+          ParentFont = False
+        end
+      end
     end
   end
 end

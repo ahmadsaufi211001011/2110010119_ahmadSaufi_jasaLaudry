@@ -29,7 +29,7 @@ type
     BitBtn6: TBitBtn;
     cbb: TComboBox;
     frxdatapaket: TfrxDBDataset;
-    frxpelanggan1: TfrxReport;
+    frxpaket: TfrxReport;
     procedure posisiawal;
     procedure bersih;
     procedure BitBtn1Click(Sender: TObject);
@@ -193,7 +193,7 @@ end;
 
 procedure TForm2.BitBtn6Click(Sender: TObject);
 begin
-frxpelanggan1.ShowReport();
+   frxpaket.ShowReport();
 end;
 
 end.

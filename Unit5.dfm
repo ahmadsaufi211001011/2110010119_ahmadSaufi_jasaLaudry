@@ -203,16 +203,14 @@ object Form5: TForm5
   end
   object frxstatuscucian1: TfrxReport
     Version = '4.0.11'
-    DataSet = frxdatastatuscucian
-    DataSetName = 'frxdatastatuscucian'
     DotMatrixReport = False
     IniFile = '\Software\Fast Reports'
     PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
     PreviewOptions.Zoom = 1.000000000000000000
     PrintOptions.Printer = 'Default'
     PrintOptions.PrintOnSheet = 0
-    ReportOptions.CreateDate = 45262.443444247690000000
-    ReportOptions.LastChange = 45262.443444247690000000
+    ReportOptions.CreateDate = 45262.443444247700000000
+    ReportOptions.LastChange = 45262.470386979200000000
     ScriptLanguage = 'PascalScript'
     ScriptText.Strings = (
       'begin'
@@ -220,7 +218,11 @@ object Form5: TForm5
       'end.')
     Left = 720
     Top = 200
-    Datasets = <>
+    Datasets = <
+      item
+        DataSet = frxdatastatuscucian
+        DataSetName = 'frxdatastatuscucian'
+      end>
     Variables = <>
     Style = <>
     object Data: TfrxDataPage
@@ -231,6 +233,171 @@ object Form5: TForm5
       PaperWidth = 210.000000000000000000
       PaperHeight = 297.000000000000000000
       PaperSize = 9
+      object ReportTitle1: TfrxReportTitle
+        Height = 49.133890000000000000
+        Top = 18.897650000000000000
+        Width = 793.701300000000000000
+        object Memo1: TfrxMemoView
+          Left = 317.480520000000000000
+          Top = 11.338590000000000000
+          Width = 181.417440000000000000
+          Height = 18.897650000000000000
+          DisplayFormat.DecimalSeparator = ','
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Memo.UTF8 = (
+            'Laporan Data Status Cucian')
+          ParentFont = False
+        end
+      end
+      object Header1: TfrxHeader
+        Height = 18.897650000000000000
+        Top = 128.504020000000000000
+        Width = 793.701300000000000000
+        object Memo2: TfrxMemoView
+          Left = 52.913420000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          DisplayFormat.DecimalSeparator = ','
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          Memo.UTF8 = (
+            'nama status')
+          ParentFont = False
+        end
+        object Memo3: TfrxMemoView
+          Left = 147.401670000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          DisplayFormat.DecimalSeparator = ','
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          Memo.UTF8 = (
+            'jumlah status')
+          ParentFont = False
+        end
+        object Memo4: TfrxMemoView
+          Left = 241.889920000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          DisplayFormat.DecimalSeparator = ','
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          Memo.UTF8 = (
+            'kondisi status')
+          ParentFont = False
+        end
+        object Memo5: TfrxMemoView
+          Left = 336.378170000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          DisplayFormat.DecimalSeparator = ','
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          Memo.UTF8 = (
+            'deskripsi status')
+          ParentFont = False
+        end
+      end
+      object MasterData1: TfrxMasterData
+        Height = 18.897650000000000000
+        Top = 170.078850000000000000
+        Width = 793.701300000000000000
+        DataSet = frxdatastatuscucian
+        DataSetName = 'frxdatastatuscucian'
+        RowCount = 0
+        object Memo6: TfrxMemoView
+          Left = 52.913420000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          DataField = 'nama_status'
+          DataSet = frxdatastatuscucian
+          DataSetName = 'frxdatastatuscucian'
+          DisplayFormat.DecimalSeparator = ','
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          Memo.UTF8 = (
+            '[frxdatastatuscucian."nama_status"]')
+          ParentFont = False
+        end
+        object Memo7: TfrxMemoView
+          Left = 147.401670000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          DataField = 'jumlah_status'
+          DataSet = frxdatastatuscucian
+          DataSetName = 'frxdatastatuscucian'
+          DisplayFormat.DecimalSeparator = ','
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          Memo.UTF8 = (
+            '[frxdatastatuscucian."jumlah_status"]')
+          ParentFont = False
+        end
+        object Memo8: TfrxMemoView
+          Left = 241.889920000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          DataField = 'kondisi_status'
+          DataSet = frxdatastatuscucian
+          DataSetName = 'frxdatastatuscucian'
+          DisplayFormat.DecimalSeparator = ','
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          Memo.UTF8 = (
+            '[frxdatastatuscucian."kondisi_status"]')
+          ParentFont = False
+        end
+        object Memo9: TfrxMemoView
+          Left = 336.378170000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          DataField = 'deskripsi_status'
+          DataSet = frxdatastatuscucian
+          DataSetName = 'frxdatastatuscucian'
+          DisplayFormat.DecimalSeparator = ','
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          Memo.UTF8 = (
+            '[frxdatastatuscucian."deskripsi_status"]')
+          ParentFont = False
+        end
+      end
     end
   end
 end

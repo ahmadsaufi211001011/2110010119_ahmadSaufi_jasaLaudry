@@ -39,6 +39,7 @@ type
     procedure BitBtn3Click(Sender: TObject);
     procedure BitBtn4Click(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure BitBtn6Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -191,6 +192,11 @@ end;
 procedure TForm4.FormShow(Sender: TObject);
 begin
 posisiawal;
+end;
+
+procedure TForm4.BitBtn6Click(Sender: TObject);
+begin
+frxjenisbarang.ShowReport();
 end;
 
 end.

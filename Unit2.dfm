@@ -203,26 +203,28 @@ object Form2: TForm2
     Left = 584
     Top = 192
   end
-  object frxpelanggan1: TfrxReport
+  object frxpaket: TfrxReport
     Version = '4.0.11'
-    DataSet = frxdatapaket
-    DataSetName = 'frxdatapaket'
     DotMatrixReport = False
     IniFile = '\Software\Fast Reports'
     PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
     PreviewOptions.Zoom = 1.000000000000000000
     PrintOptions.Printer = 'Default'
     PrintOptions.PrintOnSheet = 0
-    ReportOptions.CreateDate = 45262.440288576390000000
-    ReportOptions.LastChange = 45262.440288576390000000
+    ReportOptions.CreateDate = 45262.453802615700000000
+    ReportOptions.LastChange = 45262.457803842600000000
     ScriptLanguage = 'PascalScript'
     ScriptText.Strings = (
       'begin'
       ''
       'end.')
-    Left = 688
+    Left = 672
     Top = 192
-    Datasets = <>
+    Datasets = <
+      item
+        DataSet = frxdatapaket
+        DataSetName = 'frxdatapaket'
+      end>
     Variables = <>
     Style = <>
     object Data: TfrxDataPage
@@ -233,6 +235,179 @@ object Form2: TForm2
       PaperWidth = 210.000000000000000000
       PaperHeight = 297.000000000000000000
       PaperSize = 9
+      object ReportTitle1: TfrxReportTitle
+        Height = 45.354360000000000000
+        Top = 18.897650000000000000
+        Width = 793.701300000000000000
+        object Memo1: TfrxMemoView
+          Left = 343.937230000000000000
+          Top = 3.779530000000000000
+          Width = 151.181200000000000000
+          Height = 30.236240000000000000
+          DisplayFormat.DecimalSeparator = ','
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Memo.UTF8 = (
+            'Laporan Data Paket')
+          ParentFont = False
+        end
+      end
+      object Header1: TfrxHeader
+        Height = 18.897650000000000000
+        Top = 124.724490000000000000
+        Width = 793.701300000000000000
+        object Memo2: TfrxMemoView
+          Left = 30.236240000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          DisplayFormat.DecimalSeparator = ','
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haCenter
+          Memo.UTF8 = (
+            'nama paket')
+          ParentFont = False
+        end
+        object Memo3: TfrxMemoView
+          Left = 124.724490000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          DisplayFormat.DecimalSeparator = ','
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haCenter
+          Memo.UTF8 = (
+            'jenis paket')
+          ParentFont = False
+        end
+        object Memo4: TfrxMemoView
+          Left = 219.212740000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          DisplayFormat.DecimalSeparator = ','
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haCenter
+          Memo.UTF8 = (
+            'jumlah paket')
+          ParentFont = False
+        end
+        object Memo5: TfrxMemoView
+          Left = 313.700990000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          DisplayFormat.DecimalSeparator = ','
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haCenter
+          Memo.UTF8 = (
+            'deskripsi paket')
+          ParentFont = False
+        end
+      end
+      object MasterData1: TfrxMasterData
+        Height = 18.897650000000000000
+        Top = 166.299320000000000000
+        Width = 793.701300000000000000
+        DataSet = frxdatapaket
+        DataSetName = 'frxdatapaket'
+        RowCount = 0
+        object Memo6: TfrxMemoView
+          Left = 30.236240000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          DataField = 'nama_paket'
+          DataSet = frxdatapaket
+          DataSetName = 'frxdatapaket'
+          DisplayFormat.DecimalSeparator = ','
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haCenter
+          Memo.UTF8 = (
+            '[frxdatapaket."nama_paket"]')
+          ParentFont = False
+        end
+        object Memo7: TfrxMemoView
+          Left = 124.724490000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          DataField = 'jenis_paket'
+          DataSet = frxdatapaket
+          DataSetName = 'frxdatapaket'
+          DisplayFormat.DecimalSeparator = ','
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haCenter
+          Memo.UTF8 = (
+            '[frxdatapaket."jenis_paket"]')
+          ParentFont = False
+        end
+        object Memo8: TfrxMemoView
+          Left = 219.212740000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          DataField = 'jumlah_paket'
+          DataSet = frxdatapaket
+          DataSetName = 'frxdatapaket'
+          DisplayFormat.DecimalSeparator = ','
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haCenter
+          Memo.UTF8 = (
+            '[frxdatapaket."jumlah_paket"]')
+          ParentFont = False
+        end
+        object Memo9: TfrxMemoView
+          Left = 313.700990000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          DataField = 'deskripsi_paket'
+          DataSet = frxdatapaket
+          DataSetName = 'frxdatapaket'
+          DisplayFormat.DecimalSeparator = ','
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haCenter
+          Memo.UTF8 = (
+            '[frxdatapaket."deskripsi_paket"]')
+          ParentFont = False
+        end
+      end
     end
   end
 end

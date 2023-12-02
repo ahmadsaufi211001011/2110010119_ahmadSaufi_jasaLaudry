@@ -152,6 +152,7 @@ object Form7: TForm7
     Height = 50
     Caption = 'Laporan'
     TabOrder = 8
+    OnClick = BitBtn6Click
   end
   object edt5: TEdit
     Left = 176
@@ -208,5 +209,35 @@ object Form7: TForm7
     DataSet = ZQuery1
     Left = 648
     Top = 112
+  end
+  object frxdatatbarang: TfrxDBDataset
+    UserName = 'frxdatatbarang'
+    CloseDataSource = False
+    DataSet = ZQuery1
+    Left = 600
+    Top = 192
+  end
+  object frxtbarang1: TfrxReport
+    Version = '4.0.11'
+    DataSet = frxdatatbarang
+    DataSetName = 'frxdatatbarang'
+    DotMatrixReport = False
+    IniFile = '\Software\Fast Reports'
+    PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
+    PreviewOptions.Zoom = 1.000000000000000000
+    PrintOptions.Printer = 'Default'
+    PrintOptions.PrintOnSheet = 0
+    ReportOptions.CreateDate = 45262.445742696760000000
+    ReportOptions.LastChange = 45262.445742696760000000
+    ScriptLanguage = 'PascalScript'
+    ScriptText.Strings = (
+      'begin'
+      ''
+      'end.')
+    Left = 672
+    Top = 192
+    Datasets = <>
+    Variables = <>
+    Style = <>
   end
 end

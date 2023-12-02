@@ -137,6 +137,7 @@ object Form9: TForm9
     Height = 50
     Caption = 'Laporan'
     TabOrder = 8
+    OnClick = BitBtn6Click
   end
   object dbgrd1: TDBGrid
     Left = 24
@@ -188,5 +189,44 @@ object Form9: TForm9
     DataSet = ZQuery1
     Left = 760
     Top = 120
+  end
+  object frxdatadetailcucian: TfrxDBDataset
+    UserName = 'frxdatadetailcucian'
+    CloseDataSource = False
+    DataSet = ZQuery1
+    Left = 576
+    Top = 160
+  end
+  object frxcucian: TfrxReport
+    Version = '4.0.11'
+    DataSet = frxdatadetailcucian
+    DataSetName = 'frxdatadetailcucian'
+    DotMatrixReport = False
+    IniFile = '\Software\Fast Reports'
+    PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
+    PreviewOptions.Zoom = 1.000000000000000000
+    PrintOptions.Printer = 'Default'
+    PrintOptions.PrintOnSheet = 0
+    ReportOptions.CreateDate = 45262.447911979160000000
+    ReportOptions.LastChange = 45262.447911979160000000
+    ScriptLanguage = 'PascalScript'
+    ScriptText.Strings = (
+      'begin'
+      ''
+      'end.')
+    Left = 640
+    Top = 152
+    Datasets = <>
+    Variables = <>
+    Style = <>
+    object Data: TfrxDataPage
+      Height = 1000.000000000000000000
+      Width = 1000.000000000000000000
+    end
+    object Page1: TfrxReportPage
+      PaperWidth = 210.000000000000000000
+      PaperHeight = 297.000000000000000000
+      PaperSize = 9
+    end
   end
 end

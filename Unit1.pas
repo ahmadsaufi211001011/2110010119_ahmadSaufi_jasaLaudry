@@ -26,8 +26,8 @@ type
     BitBtn5: TBitBtn;
     BitBtn6: TBitBtn;
     dbgrd1: TDBGrid;
-    frxdatahubungan: TfrxDBDataset;
-    frxhubunganpelanggan: TfrxReport;
+    frxdatapelanggan: TfrxDBDataset;
+    frxpelanggan: TfrxReport;
     procedure bersih;
     procedure posisiawal;
     procedure BitBtn1Click(Sender: TObject);
@@ -191,7 +191,7 @@ end;
 
 procedure TForm1.BitBtn6Click(Sender: TObject);
 begin
-frxhubunganpelanggan.ShowReport();
+frxpelanggan.ShowReport();
 end;
 
 end.

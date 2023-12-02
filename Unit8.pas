@@ -5,7 +5,8 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, Buttons, Grids, DBGrids, DB, ZAbstractRODataset,
-  ZAbstractDataset, ZDataset, ZAbstractConnection, ZConnection, ComCtrls;
+  ZAbstractDataset, ZDataset, ZAbstractConnection, ZConnection, ComCtrls,
+  frxClass, frxDBSet;
 
 type
   TForm8 = class(TForm)
@@ -27,12 +28,15 @@ type
     ds1: TDataSource;
     dtp1: TDateTimePicker;
     dtp2: TDateTimePicker;
+    frxdatadetailpembayaran: TfrxDBDataset;
+    frxdetail1: TfrxReport;
     procedure posisiawal;
     procedure bersih;
     procedure BitBtn1Click(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure BitBtn5Click(Sender: TObject);
     procedure BitBtn2Click(Sender: TObject);
+    procedure BitBtn6Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -113,6 +117,11 @@ ZQuery1.Open;
 ShowMessage('DATA BERHASIL DISIMPAN!');
 
 end;
+end;
+
+procedure TForm8.BitBtn6Click(Sender: TObject);
+begin
+frxdetail1.ShowReport();
 end;
 
 end.

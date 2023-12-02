@@ -153,6 +153,7 @@ object Form5: TForm5
     Height = 50
     Caption = 'Laporan'
     TabOrder = 9
+    OnClick = BitBtn6Click
   end
   object cbb: TComboBox
     Left = 216
@@ -192,5 +193,44 @@ object Form5: TForm5
     LibraryLocation = 'C:\Users\ASUS\Desktop\delphi 5o\libmysql.dll'
     Left = 752
     Top = 32
+  end
+  object frxdatastatuscucian: TfrxDBDataset
+    UserName = 'frxdatastatuscucian'
+    CloseDataSource = False
+    DataSet = ZQuery1
+    Left = 624
+    Top = 200
+  end
+  object frxstatuscucian1: TfrxReport
+    Version = '4.0.11'
+    DataSet = frxdatastatuscucian
+    DataSetName = 'frxdatastatuscucian'
+    DotMatrixReport = False
+    IniFile = '\Software\Fast Reports'
+    PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
+    PreviewOptions.Zoom = 1.000000000000000000
+    PrintOptions.Printer = 'Default'
+    PrintOptions.PrintOnSheet = 0
+    ReportOptions.CreateDate = 45262.443444247690000000
+    ReportOptions.LastChange = 45262.443444247690000000
+    ScriptLanguage = 'PascalScript'
+    ScriptText.Strings = (
+      'begin'
+      ''
+      'end.')
+    Left = 720
+    Top = 200
+    Datasets = <>
+    Variables = <>
+    Style = <>
+    object Data: TfrxDataPage
+      Height = 1000.000000000000000000
+      Width = 1000.000000000000000000
+    end
+    object Page1: TfrxReportPage
+      PaperWidth = 210.000000000000000000
+      PaperHeight = 297.000000000000000000
+      PaperSize = 9
+    end
   end
 end

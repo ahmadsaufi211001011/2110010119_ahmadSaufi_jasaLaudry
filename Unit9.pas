@@ -5,7 +5,8 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, Buttons, Grids, DBGrids, DB, ZAbstractRODataset,
-  ZAbstractDataset, ZDataset, ZAbstractConnection, ZConnection, ComCtrls;
+  ZAbstractDataset, ZDataset, ZAbstractConnection, ZConnection, ComCtrls,
+  frxClass, frxDBSet;
 
 type
   TForm9 = class(TForm)
@@ -27,6 +28,8 @@ type
     ZQuery1: TZQuery;
     ds1: TDataSource;
     dtp1: TDateTimePicker;
+    frxdatadetailcucian: TfrxDBDataset;
+    frxcucian: TfrxReport;
     procedure posisiawal;
     procedure bersih;
     procedure BitBtn1Click(Sender: TObject);
@@ -34,6 +37,7 @@ type
     procedure BitBtn2Click(Sender: TObject);
     procedure dbgrd1CellClick(Column: TColumn);
     procedure BitBtn3Click(Sender: TObject);
+    procedure BitBtn6Click(Sender: TObject);
 
   private
     { Private declarations }
@@ -157,6 +161,11 @@ ShowMessage('DATA BERHASIL DIUPDATE!');
 posisiawal;
 bersih;
 end;
+end;
+
+procedure TForm9.BitBtn6Click(Sender: TObject);
+begin
+frxcucian.showreport();
 end;
 
 end.

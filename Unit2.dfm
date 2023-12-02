@@ -153,6 +153,7 @@ object Form2: TForm2
     Height = 50
     Caption = 'Laporan'
     TabOrder = 9
+    OnClick = BitBtn6Click
   end
   object cbb: TComboBox
     Left = 200
@@ -194,5 +195,44 @@ object Form2: TForm2
     DataSet = ZQuery1
     Left = 752
     Top = 136
+  end
+  object frxdatapaket: TfrxDBDataset
+    UserName = 'frxdatapaket'
+    CloseDataSource = False
+    DataSet = ZQuery1
+    Left = 584
+    Top = 192
+  end
+  object frxpelanggan1: TfrxReport
+    Version = '4.0.11'
+    DataSet = frxdatapaket
+    DataSetName = 'frxdatapaket'
+    DotMatrixReport = False
+    IniFile = '\Software\Fast Reports'
+    PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
+    PreviewOptions.Zoom = 1.000000000000000000
+    PrintOptions.Printer = 'Default'
+    PrintOptions.PrintOnSheet = 0
+    ReportOptions.CreateDate = 45262.440288576390000000
+    ReportOptions.LastChange = 45262.440288576390000000
+    ScriptLanguage = 'PascalScript'
+    ScriptText.Strings = (
+      'begin'
+      ''
+      'end.')
+    Left = 688
+    Top = 192
+    Datasets = <>
+    Variables = <>
+    Style = <>
+    object Data: TfrxDataPage
+      Height = 1000.000000000000000000
+      Width = 1000.000000000000000000
+    end
+    object Page1: TfrxReportPage
+      PaperWidth = 210.000000000000000000
+      PaperHeight = 297.000000000000000000
+      PaperSize = 9
+    end
   end
 end

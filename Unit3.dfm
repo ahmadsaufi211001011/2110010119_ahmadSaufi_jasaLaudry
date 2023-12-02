@@ -175,4 +175,31 @@ object Form3: TForm3
     Left = 752
     Top = 32
   end
+  object frxdatalayanan: TfrxDBDataset
+    UserName = 'frxdatalayanan'
+    CloseDataSource = False
+    Left = 592
+    Top = 192
+  end
+  object frxpelanggan1: TfrxReport
+    Version = '4.0.11'
+    DotMatrixReport = False
+    IniFile = '\Software\Fast Reports'
+    PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
+    PreviewOptions.Zoom = 1.000000000000000000
+    PrintOptions.Printer = 'Default'
+    PrintOptions.PrintOnSheet = 0
+    ReportOptions.CreateDate = 45262.441342766200000000
+    ReportOptions.LastChange = 45262.441342766200000000
+    ScriptLanguage = 'PascalScript'
+    ScriptText.Strings = (
+      'begin'
+      ''
+      'end.')
+    Left = 680
+    Top = 192
+    Datasets = <>
+    Variables = <>
+    Style = <>
+  end
 end

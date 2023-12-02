@@ -146,6 +146,7 @@ object Form6: TForm6
     Height = 50
     Caption = 'Laporan'
     TabOrder = 8
+    OnClick = BitBtn6Click
   end
   object dtp1: TDateTimePicker
     Left = 176
@@ -192,5 +193,35 @@ object Form6: TForm6
     DataSet = ZQuery1
     Left = 672
     Top = 128
+  end
+  object frxdatatransaksi: TfrxDBDataset
+    UserName = 'frxdatatransaksi'
+    CloseDataSource = False
+    DataSet = ZQuery1
+    Left = 560
+    Top = 168
+  end
+  object frxtransaksi1: TfrxReport
+    Version = '4.0.11'
+    DataSet = frxdatatransaksi
+    DataSetName = 'frxdatatransaksi'
+    DotMatrixReport = False
+    IniFile = '\Software\Fast Reports'
+    PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
+    PreviewOptions.Zoom = 1.000000000000000000
+    PrintOptions.Printer = 'Default'
+    PrintOptions.PrintOnSheet = 0
+    ReportOptions.CreateDate = 45262.444495636580000000
+    ReportOptions.LastChange = 45262.444495636580000000
+    ScriptLanguage = 'PascalScript'
+    ScriptText.Strings = (
+      'begin'
+      ''
+      'end.')
+    Left = 616
+    Top = 168
+    Datasets = <>
+    Variables = <>
+    Style = <>
   end
 end

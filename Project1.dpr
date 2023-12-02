@@ -11,13 +11,15 @@ uses
   Unit7 in 'Unit7.pas' {Form7},
   Unit8 in 'Unit8.pas' {Form8},
   Unit9 in 'Unit9.pas' {Form9},
-  Unit10 in 'Unit10.pas' {Form10};
+  Unit10 in 'Unit10.pas' {Form10},
+  Unit11 in 'Unit11.pas' {Form11};
 
 {$R *.res}
 
 begin
   Application.Initialize;
   Application.CreateForm(TForm10, Form10);
+  Application.CreateForm(TForm11, Form11);
   Application.CreateForm(TForm6, Form6);
   Application.CreateForm(TForm5, Form5);
   Application.CreateForm(TForm4, Form4);

@@ -1,6 +1,6 @@
 object Form4: TForm4
-  Left = 208
-  Top = 146
+  Left = 217
+  Top = 136
   Width = 928
   Height = 538
   Caption = 'Table Jenis Barang'
@@ -56,9 +56,9 @@ object Form4: TForm4
   object lbl4: TLabel
     Left = 32
     Top = 136
-    Width = 118
+    Width = 125
     Height = 23
-    Caption = 'Status Barang'
+    Caption = 'Satuan Barang'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -19
@@ -160,16 +160,13 @@ object Form4: TForm4
       'kain'
       'celana')
   end
-  object cbb2: TComboBox
+  object edt: TEdit
     Left = 200
     Top = 136
     Width = 497
     Height = 21
-    ItemHeight = 13
     TabOrder = 10
-    Items.Strings = (
-      'diproses'
-      'telah selesai')
+    Text = 'edt'
   end
   object ZQuery1: TZQuery
     Connection = con1

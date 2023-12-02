@@ -24,7 +24,7 @@ object Form10: TForm10
   end
   object btn2: TButton
     Left = 32
-    Top = 64
+    Top = 208
     Width = 75
     Height = 25
     Caption = 'transaksi'
@@ -32,11 +32,74 @@ object Form10: TForm10
     OnClick = btn2Click
   end
   object btn3: TButton
-    Left = 32
-    Top = 96
+    Left = 136
+    Top = 24
     Width = 75
     Height = 25
     Caption = 'user'
     TabOrder = 2
+  end
+  object BitBtn: TBitBtn
+    Left = 32
+    Top = 240
+    Width = 75
+    Height = 25
+    Caption = 'tbarang'
+    TabOrder = 3
+    OnClick = BitBtnClick
+  end
+  object BitBtn61: TBitBtn
+    Left = 32
+    Top = 104
+    Width = 75
+    Height = 25
+    Caption = 'layanan'
+    TabOrder = 4
+    OnClick = BitBtn61Click
+  end
+  object BitBtn62: TBitBtn
+    Left = 32
+    Top = 64
+    Width = 75
+    Height = 25
+    Caption = 'paket'
+    TabOrder = 5
+    OnClick = BitBtn62Click
+  end
+  object BitBtn63: TBitBtn
+    Left = 32
+    Top = 136
+    Width = 75
+    Height = 25
+    Caption = 'jenis barang'
+    TabOrder = 6
+    OnClick = BitBtn63Click
+  end
+  object btn4: TButton
+    Left = 32
+    Top = 176
+    Width = 75
+    Height = 25
+    Caption = 'status cucian'
+    TabOrder = 7
+    OnClick = btn4Click
+  end
+  object btn5: TButton
+    Left = 32
+    Top = 272
+    Width = 97
+    Height = 25
+    Caption = 'detail pembayaran'
+    TabOrder = 8
+    OnClick = btn5Click
+  end
+  object btn6: TButton
+    Left = 32
+    Top = 304
+    Width = 75
+    Height = 25
+    Caption = 'detail_cucian'
+    TabOrder = 9
+    OnClick = btn6Click
   end
 end

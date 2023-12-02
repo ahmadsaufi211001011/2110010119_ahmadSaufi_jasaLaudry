@@ -1,5 +1,5 @@
 object Form1: TForm1
-  Left = 227
+  Left = 250
   Top = 159
   Width = 816
   Height = 538
@@ -126,6 +126,7 @@ object Form1: TForm1
     Height = 50
     Caption = 'Laporan'
     TabOrder = 8
+    OnClick = BitBtn6Click
   end
   object dbgrd1: TDBGrid
     Left = 16
@@ -168,5 +169,91 @@ object Form1: TForm1
     DataSet = ZQuery1
     Left = 760
     Top = 8
+  end
+  object frxdatahubungan: TfrxDBDataset
+    UserName = 'frxdatahubungan'
+    CloseDataSource = False
+    FieldAliases.Strings = (
+      'pelanggan_id=pelanggan_id'
+      'nama_pelanggan=nama_pelanggan'
+      'alamat=alamat'
+      'telepon=telepon')
+    DataSet = ZQuery1
+    Left = 584
+    Top = 144
+  end
+  object frxhubunganpelanggan: TfrxReport
+    Version = '4.0.11'
+    DataSet = frxdatahubungan
+    DataSetName = 'frxdatahubungan'
+    DotMatrixReport = False
+    IniFile = '\Software\Fast Reports'
+    PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
+    PreviewOptions.Zoom = 1.000000000000000000
+    PrintOptions.Printer = 'Default'
+    PrintOptions.PrintOnSheet = 0
+    ReportOptions.CreateDate = 45262.410734664400000000
+    ReportOptions.LastChange = 45262.427097442100000000
+    ScriptLanguage = 'PascalScript'
+    ScriptText.Strings = (
+      'begin'
+      ''
+      'end.')
+    Left = 672
+    Top = 144
+    Datasets = <
+      item
+        DataSet = frxdatahubungan
+        DataSetName = 'frxdatahubungan'
+      end>
+    Variables = <>
+    Style = <>
+    object Data: TfrxDataPage
+      Height = 1000.000000000000000000
+      Width = 1000.000000000000000000
+    end
+    object Page1: TfrxReportPage
+      PaperWidth = 210.000000000000000000
+      PaperHeight = 297.000000000000000000
+      PaperSize = 9
+      object ReportTitle1: TfrxReportTitle
+        Height = 60.472480000000000000
+        Top = 18.897650000000000000
+        Width = 793.701300000000000000
+        object Memo1: TfrxMemoView
+          Left = 260.787570000000000000
+          Top = 22.677180000000000000
+          Width = 279.685220000000000000
+          Height = 30.236240000000000000
+          DisplayFormat.DecimalSeparator = ','
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -24
+          Font.Name = 'Arial'
+          Font.Style = []
+          Memo.UTF8 = (
+            'Laporan data pelanggan')
+          ParentFont = False
+        end
+      end
+      object Header1: TfrxHeader
+        Height = 41.574830000000000000
+        Top = 185.196970000000000000
+        Width = 793.701300000000000000
+      end
+      object MasterData1: TfrxMasterData
+        Height = 52.913420000000000000
+        Top = 249.448980000000000000
+        Width = 793.701300000000000000
+        DataSet = frxdatahubungan
+        DataSetName = 'frxdatahubungan'
+        RowCount = 0
+      end
+      object PageHeader1: TfrxPageHeader
+        Height = 22.677180000000000000
+        Top = 102.047310000000000000
+        Width = 793.701300000000000000
+      end
+    end
   end
 end

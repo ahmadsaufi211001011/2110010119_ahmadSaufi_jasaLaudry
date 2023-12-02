@@ -26,7 +26,7 @@ type
     BitBtn5: TBitBtn;
     BitBtn6: TBitBtn;
     cbb1: TComboBox;
-    cbb2: TComboBox;
+    edt: TEdit;
     procedure posisiawal;
     procedure bersih;
     procedure BitBtn1Click(Sender: TObject);
@@ -69,7 +69,7 @@ begin
   edt1.Clear;
   edt2.Clear;
   cbb1.Text:='--pilih jenis barang ---';
-  cbb2.Text:='--pilih status barang ---';
+  edt.Clear;
 end;
 
 procedure TForm4.BitBtn1Click(Sender: TObject);
@@ -83,7 +83,7 @@ begin
   edt1.Enabled:=True;
   edt2.Enabled:=True;
   cbb1.Enabled:=True;
-  cbb2.Enabled:=True;
+      edt2.Enabled:=True;
 end;
 
 procedure TForm4.BitBtn5Click(Sender: TObject);
@@ -95,18 +95,18 @@ procedure TForm4.BitBtn2Click(Sender: TObject);
 begin
     
   // simpan
-if (edt1.Text= '')or(edt2.Text='')or(cbb1.Text= '')or(cbb2.Text='') then
+if (edt1.Text= '')or(edt2.Text='')or(cbb1.Text= '')or(edt.Text='') then
 begin
 ShowMessage('DATA TIDAK BOLEH KOSONG!');
 end else
-if (ZQuery1.Locate('nama_barang',edt1.Text,[])) or (ZQuery1.Locate('berat_barang',edt2.Text,[])) or (ZQuery1.Locate('jenis_barang',cbb1.Text,[])) or(ZQuery1.Locate('status_barang',cbb2.Text,[])) then
+if (ZQuery1.Locate('nama_barang',edt1.Text,[])) then
 begin
 ShowMessage('DATA SISWA SUDAH DIGUNAKAN!');
 
 end else
 begin
 ZQuery1.SQL.Clear;
-ZQuery1.SQL.Add('insert into jenis_barang values(null,"'+edt1.Text+'","'+edt2.Text+'","'+cbb1.Text+'","'+cbb2.Text+'")');
+ZQuery1.SQL.Add('insert into jenis_barang values(null,"'+edt1.Text+'","'+edt2.Text+'","'+cbb1.Text+'","'+edt.Text+'")');
 ZQuery1.ExecSQL;
 
 ZQuery1.SQL.Clear;
@@ -127,21 +127,21 @@ BitBtn5.Enabled:= True;
   edt1.Text:=ZQuery1.FieldList[1].AsString;
   edt2.Text:=ZQuery1.FieldList[2].AsString;
   cbb1.Text:=ZQuery1.FieldList[3].AsString;
-  cbb2.Text:=ZQuery1.FieldList[4].AsString;
+  edt.Text:=ZQuery1.FieldList[4].AsString;
   edt1.Enabled:=True;
   edt2.Enabled:=True;
   cbb1.Enabled:= True;
-  cbb2.Enabled:= True;
+  edt.Enabled:= True;
 end;
 
 procedure TForm4.BitBtn3Click(Sender: TObject);
 begin
    //edit
-if (edt1.Text= '')or (edt1.Text= '')or (cbb1.Text='') or (cbb2.Text='') then
+if (edt1.Text= '')or (edt1.Text= '')or (cbb1.Text='') or (edt.Text='') then
 begin
 ShowMessage('INPUTAN WAJIB DIISI!');
 end else
-if (edt1.Text = ZQuery1.Fields[1].AsString) and (edt2.Text = ZQuery1.Fields[2].AsString) and (cbb1.Text = ZQuery1.Fields[3].AsString) and (cbb2.Text = ZQuery1.Fields[4].AsString)
+if (edt1.Text = ZQuery1.Fields[1].AsString) and (edt2.Text = ZQuery1.Fields[2].AsString) and (cbb1.Text = ZQuery1.Fields[3].AsString) and (edt.Text = ZQuery1.Fields[4].AsString)
 then
 begin
 ShowMessage('DATA TIDAK ADA PERUBAHAN');
@@ -150,7 +150,7 @@ end else
 begin
 id:=dbgrd1.DataSource.DataSet.FieldByName('jenisbarang_id').AsString;
 ZQuery1.SQL.Clear;
-ZQuery1.SQL.Add('Update jenis_barang set nama_barang="'+edt1.Text+'",berat_barang="'+edt2.Text+'",jenis_barang="'+cbb1.Text+'",status_barang="'+cbb2.Text+'"where jenisbarang_id="'+id+'"');
+ZQuery1.SQL.Add('Update jenis_barang set nama_barang="'+edt1.Text+'",berat_barang="'+edt2.Text+'",jenis_barang="'+cbb1.Text+'",satuan_barang="'+edt.Text+'"where jenisbarang_id="'+id+'"');
 ZQuery1.ExecSQL;
 
 ZQuery1.SQL.Clear;

@@ -40,22 +40,9 @@ object Form3: TForm3
     Font.Style = []
     ParentFont = False
   end
-  object lbl3: TLabel
-    Left = 32
-    Top = 104
-    Width = 121
-    Height = 23
-    Caption = 'Paket Layanan'
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -19
-    Font.Name = 'Tahoma'
-    Font.Style = []
-    ParentFont = False
-  end
   object lbl4: TLabel
     Left = 32
-    Top = 136
+    Top = 104
     Width = 150
     Height = 23
     Caption = 'Deskripsi Layanan'
@@ -75,7 +62,7 @@ object Form3: TForm3
   end
   object edt3: TEdit
     Left = 200
-    Top = 144
+    Top = 112
     Width = 500
     Height = 21
     TabOrder = 1
@@ -159,18 +146,6 @@ object Form3: TForm3
       'laundry on demand'
       'laundry industri'
       'laundry satuan')
-  end
-  object cbb2: TComboBox
-    Left = 200
-    Top = 112
-    Width = 497
-    Height = 21
-    ItemHeight = 13
-    TabOrder = 10
-    Items.Strings = (
-      '1'
-      '2'
-      '3')
   end
   object ZQuery1: TZQuery
     Connection = con1

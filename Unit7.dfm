@@ -11,24 +11,12 @@ object Form7: TForm7
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object lbl1: TLabel
     Left = 24
-    Top = 16
-    Width = 67
-    Height = 23
-    Caption = 'paket id'
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -19
-    Font.Name = 'Tahoma'
-    Font.Style = []
-    ParentFont = False
-  end
-  object lbl2: TLabel
-    Left = 24
-    Top = 48
+    Top = 40
     Width = 86
     Height = 23
     Caption = 'layanan id'
@@ -41,7 +29,7 @@ object Form7: TForm7
   end
   object lbl3: TLabel
     Left = 24
-    Top = 80
+    Top = 72
     Width = 125
     Height = 23
     Caption = 'jenis barang id'
@@ -54,7 +42,7 @@ object Form7: TForm7
   end
   object lbl4: TLabel
     Left = 24
-    Top = 112
+    Top = 104
     Width = 49
     Height = 23
     Caption = 'harga'
@@ -67,7 +55,7 @@ object Form7: TForm7
   end
   object lbl5: TLabel
     Left = 24
-    Top = 144
+    Top = 136
     Width = 44
     Height = 23
     Caption = 'Berat'
@@ -78,88 +66,99 @@ object Form7: TForm7
     Font.Style = []
     ParentFont = False
   end
-  object edt7edt: TEdit
+  object lbl2: TLabel
+    Left = 24
+    Top = 8
+    Width = 67
+    Height = 23
+    Caption = 'paket id'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object edt1: TEdit
     Left = 176
     Top = 16
     Width = 450
     Height = 21
     TabOrder = 0
   end
-  object edt71: TEdit
+  object edt2: TEdit
     Left = 176
     Top = 48
     Width = 450
     Height = 21
     TabOrder = 1
   end
-  object edt72: TEdit
+  object edt3: TEdit
     Left = 176
     Top = 80
     Width = 450
     Height = 21
     TabOrder = 2
   end
-  object edt73: TEdit
-    Left = 176
-    Top = 112
-    Width = 450
-    Height = 21
-    TabOrder = 3
-  end
-  object BitBtn: TBitBtn
+  object BitBtn1: TBitBtn
     Left = 24
     Top = 184
     Width = 75
     Height = 50
     Caption = 'BARU'
-    TabOrder = 4
+    TabOrder = 3
+    OnClick = BitBtn1Click
   end
-  object BitBtn51: TBitBtn
+  object BitBtn2: TBitBtn
     Left = 112
     Top = 184
     Width = 75
     Height = 50
     Caption = 'Simpan'
-    TabOrder = 5
+    TabOrder = 4
+    OnClick = BitBtn2Click
   end
-  object BitBtn52: TBitBtn
+  object BitBtn3: TBitBtn
     Left = 200
     Top = 184
     Width = 75
     Height = 50
     Caption = 'Edit'
-    TabOrder = 6
+    TabOrder = 5
+    OnClick = BitBtn3Click
   end
-  object BitBtn53: TBitBtn
+  object BitBtn4: TBitBtn
     Left = 288
     Top = 184
     Width = 75
     Height = 50
     Caption = 'Hapus'
-    TabOrder = 7
+    TabOrder = 6
+    OnClick = BitBtn4Click
   end
-  object BitBtn54: TBitBtn
+  object BitBtn5: TBitBtn
     Left = 376
     Top = 184
     Width = 75
     Height = 50
     Caption = 'Batal'
-    TabOrder = 8
+    TabOrder = 7
+    OnClick = BitBtn5Click
   end
-  object BitBtn55: TBitBtn
+  object BitBtn6: TBitBtn
     Left = 464
     Top = 184
     Width = 75
     Height = 50
     Caption = 'Laporan'
-    TabOrder = 9
+    TabOrder = 8
   end
-  object edt: TEdit
+  object edt5: TEdit
     Left = 176
     Top = 144
     Width = 450
     Height = 21
-    TabOrder = 10
+    TabOrder = 9
   end
   object dbgrd1: TDBGrid
     Left = 24
@@ -167,12 +166,20 @@ object Form7: TForm7
     Width = 601
     Height = 233
     DataSource = ds1
-    TabOrder = 11
+    TabOrder = 10
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = dbgrd1CellClick
+  end
+  object edt4: TEdit
+    Left = 176
+    Top = 112
+    Width = 449
+    Height = 21
+    TabOrder = 11
   end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP
@@ -188,7 +195,7 @@ object Form7: TForm7
     Left = 648
     Top = 16
   end
-  object zqry1: TZQuery
+  object ZQuery1: TZQuery
     Connection = con1
     Active = True
     SQL.Strings = (
@@ -198,7 +205,7 @@ object Form7: TForm7
     Top = 64
   end
   object ds1: TDataSource
-    DataSet = zqry1
+    DataSet = ZQuery1
     Left = 648
     Top = 112
   end

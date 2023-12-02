@@ -93,7 +93,7 @@ if (edt1.Text= '')or(edt2.Text='')or(cbb.Text= '')or(edt3.Text='') then
 begin
 ShowMessage('DATA TIDAK BOLEH KOSONG!');
 end else
-if (ZQuery1.Locate('nama_status',edt1.Text,[])) or (ZQuery1.Locate('jumlah_status',edt2.Text,[])) or (ZQuery1.Locate('kondisi_status',cbb.Text,[])) or(ZQuery1.Locate('deskripsi_status',edt3.Text,[])) then
+if (ZQuery1.Locate('nama_status',edt1.Text,[])) then
 begin
 ShowMessage('DATA SISWA SUDAH DIGUNAKAN!');
 

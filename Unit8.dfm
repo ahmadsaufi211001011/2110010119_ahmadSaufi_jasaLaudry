@@ -1,6 +1,6 @@
 object Form8: TForm8
-  Left = 179
-  Top = 198
+  Left = 250
+  Top = 161
   Width = 928
   Height = 540
   Caption = 'Table detail pembayaran'
@@ -11,14 +11,15 @@ object Form8: TForm8
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object lbl1: TLabel
     Left = 24
     Top = 16
-    Width = 94
+    Width = 124
     Height = 23
-    Caption = 'transaksi id'
+    Caption = 'detailcucian_id'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -19
@@ -65,81 +66,70 @@ object Form8: TForm8
     Font.Style = []
     ParentFont = False
   end
-  object edt7edt: TEdit
+  object edt1: TEdit
     Left = 176
     Top = 16
     Width = 450
     Height = 21
     TabOrder = 0
   end
-  object edt71: TEdit
+  object edt2: TEdit
     Left = 176
     Top = 48
     Width = 450
     Height = 21
     TabOrder = 1
   end
-  object edt72: TEdit
-    Left = 176
-    Top = 80
-    Width = 450
-    Height = 21
-    TabOrder = 2
-  end
-  object edt73: TEdit
-    Left = 176
-    Top = 112
-    Width = 450
-    Height = 21
-    TabOrder = 3
-  end
-  object BitBtn: TBitBtn
+  object BitBtn1: TBitBtn
     Left = 24
     Top = 160
     Width = 75
     Height = 50
     Caption = 'BARU'
-    TabOrder = 4
+    TabOrder = 2
+    OnClick = BitBtn1Click
   end
-  object BitBtn51: TBitBtn
+  object BitBtn2: TBitBtn
     Left = 112
     Top = 160
     Width = 75
     Height = 50
     Caption = 'Simpan'
-    TabOrder = 5
+    TabOrder = 3
+    OnClick = BitBtn2Click
   end
-  object BitBtn52: TBitBtn
+  object BitBtn3: TBitBtn
     Left = 200
     Top = 160
     Width = 75
     Height = 50
     Caption = 'Edit'
-    TabOrder = 6
+    TabOrder = 4
   end
-  object BitBtn53: TBitBtn
+  object BitBtn4: TBitBtn
     Left = 288
     Top = 160
     Width = 75
     Height = 50
     Caption = 'Hapus'
-    TabOrder = 7
+    TabOrder = 5
   end
-  object BitBtn54: TBitBtn
+  object BitBtn5: TBitBtn
     Left = 376
     Top = 160
     Width = 75
     Height = 50
     Caption = 'Batal'
-    TabOrder = 8
+    TabOrder = 6
+    OnClick = BitBtn5Click
   end
-  object BitBtn55: TBitBtn
+  object BitBtn6: TBitBtn
     Left = 464
     Top = 160
     Width = 75
     Height = 50
     Caption = 'Laporan'
-    TabOrder = 9
+    TabOrder = 7
   end
   object dbgrd1: TDBGrid
     Left = 24
@@ -147,12 +137,30 @@ object Form8: TForm8
     Width = 609
     Height = 233
     DataSource = ds1
-    TabOrder = 10
+    TabOrder = 8
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+  end
+  object dtp1: TDateTimePicker
+    Left = 176
+    Top = 88
+    Width = 449
+    Height = 21
+    Date = 45262.359607141200000000
+    Time = 45262.359607141200000000
+    TabOrder = 9
+  end
+  object dtp2: TDateTimePicker
+    Left = 176
+    Top = 120
+    Width = 449
+    Height = 21
+    Date = 45262.359792048610000000
+    Time = 45262.359792048610000000
+    TabOrder = 10
   end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP
@@ -168,7 +176,7 @@ object Form8: TForm8
     Left = 648
     Top = 16
   end
-  object zqry1: TZQuery
+  object ZQuery1: TZQuery
     Connection = con1
     Active = True
     SQL.Strings = (
@@ -178,7 +186,7 @@ object Form8: TForm8
     Top = 64
   end
   object ds1: TDataSource
-    DataSet = zqry1
+    DataSet = ZQuery1
     Left = 648
     Top = 112
   end

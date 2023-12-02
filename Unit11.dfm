@@ -90,6 +90,7 @@ object Form11: TForm11
     Height = 33
     Caption = 'daftar'
     TabOrder = 4
+    OnClick = btn3Click
   end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP

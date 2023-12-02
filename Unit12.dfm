@@ -1,6 +1,6 @@
 object Form12: TForm12
-  Left = 224
-  Top = 212
+  Left = 211
+  Top = 188
   Width = 928
   Height = 480
   Caption = 'Daftar'
@@ -73,6 +73,7 @@ object Form12: TForm12
     Height = 25
     Caption = 'daftar'
     TabOrder = 2
+    OnClick = btn1Click
   end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP

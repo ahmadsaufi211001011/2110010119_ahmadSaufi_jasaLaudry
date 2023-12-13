@@ -1,6 +1,6 @@
 object Form11: TForm11
-  Left = 217
-  Top = 171
+  Left = 216
+  Top = 183
   Width = 928
   Height = 480
   Caption = 'user'

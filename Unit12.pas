@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, DB, ZAbstractRODataset, ZAbstractDataset, ZDataset,
-  ZAbstractConnection, ZConnection, StdCtrls;
+  ZAbstractConnection, ZConnection, StdCtrls, Buttons;
 
 type
   TForm12 = class(TForm)
@@ -28,6 +28,8 @@ var
  role: string;
   Form12: TForm12;
 implementation
+
+uses Unit11, Unit10;
 
 {$R *.dfm}
 

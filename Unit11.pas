@@ -12,15 +12,17 @@ type
     con1: TZConnection;
     ZQuery1: TZQuery;
     lbl1: TLabel;
-    lbl2: TLabel;
     lbl3: TLabel;
     edt1: TEdit;
     edt2: TEdit;
     btn1: TButton;
-    btn2: TButton;
     btn3: TButton;
+    lbl2: TLabel;
+    lbl4: TLabel;
+    btn2: TButton;
     procedure btn1Click(Sender: TObject);
     procedure btn3Click(Sender: TObject);
+    procedure btn2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -64,6 +66,15 @@ end;
 procedure TForm11.btn3Click(Sender: TObject);
 begin
 form12.showmodal;
+end;
+
+procedure TForm11.btn2Click(Sender: TObject);
+begin
+begin
+  if (application.messagebox('Apakah Anda ingin Keluar Aplikasi','Peringatan',mb_yesno)=idyes)
+  then
+   close;
+end;
 end;
 
 end.
